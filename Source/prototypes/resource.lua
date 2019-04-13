@@ -18,24 +18,16 @@ data:extend(
    },
    collision_box = {{ -0.1, -0.1}, {0.1, 0.1}},
    selection_box = {{ -0.5, -0.5}, {0.5, 0.5}},
-   autoplace =
-   {
-     order = "z",
-     control = "morphite-ore",
-     sharpness = 15/16,
-     richness_multiplier = 1500,
-     richness_base = 10,
-     richness_multiplier_distance_bonus = 20,
-     coverage = ((0.006 / 3) / 1.1 * 1.49) * 1.5, --1.5 x vanilla iron coverage from 0.16... 0.17 resource gen is too hairy to understand for now
-     peaks =
-    {
-      {
-        noise_layer = "morphite-ore",
-        noise_octaves_difference = -0.85,
-        noise_persistence = 0.4
-      }
-    },    
-   },
+   autoplace = resource_autoplace.resource_autoplace_settings{
+    name = "morphite-ore",
+    order = "z",
+    base_density = 10,
+    has_starting_area_placement = true,
+    resource_index = resource_autoplace.get_next_resource_index() + 60,
+    regular_rq_factor_multiplier = 1.10,
+    starting_rq_factor_multiplier = 1.5
+  },
+
    stage_counts = {15000, 8000, 4000, 2000, 1000, 500, 200, 80},
    stages =
     {
