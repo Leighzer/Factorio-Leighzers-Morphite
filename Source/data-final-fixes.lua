@@ -6,9 +6,12 @@ InsertData()--this is where all recipes+technology get loaded into data.raw
 
 local itemTable =
 {
-  {"morphite-ore", 1},
-  {"morphite-fuel", 2}
+  {"morphite-ore", 1}  
 }
+
+if settings.startup["ismorphiteToMorphiteFuelEnabled"].value then --if morephite fuel is enabled enabled create deadlock stacking items/recipes
+  table.insert(itemTable,{"morphite-fuel", 2})
+end
 
 if deadlock_stacking then
   for _, item in pairs(itemTable) do

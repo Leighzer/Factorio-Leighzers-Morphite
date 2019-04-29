@@ -10,7 +10,7 @@ if angelsmods and angelsmods.refining then
           }
     })
 
-    --Disable these recipes since Angles provides a way to get them/they would be OP if enabled
+    --Disable these recipes since Angels provides a way to get them/they would be OP if enabled
     DisableDataInsert("morphite-to-iron")
     DisableDataInsert("morphite-to-copper")    
     DisableDataInsert("morphite-to-wildcard")   
