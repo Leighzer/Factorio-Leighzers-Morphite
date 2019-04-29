@@ -6,6 +6,6 @@
   "contact": "Please message me on the factorio forums my username is leighzer.",
   "homepage": "https://forums.factorio.com/viewtopic.php?f=190&t=63592",
   "factorio_version": "0.17",
-  "dependencies": [ "base >= 0.17", "? rso-mod >= 4.0.2", "? bobores >= 0.17.0", "? angelsrefining >= 0.10.1"],
+  "dependencies": [ "base >= 0.17", "? rso-mod >= 4.0.2", "? bobores >= 0.17.0", "? angelsrefining >= 0.10.1", "? deadlock-beltboxes-loaders", "? DeadlockCrating"],
   "description": "Configurable vanilla friendly mod that adds a new supplemental ore to the game. This new ore can be processed into the other raw resources."
 }
