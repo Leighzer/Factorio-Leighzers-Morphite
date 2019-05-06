@@ -2,7 +2,7 @@ data:extend(
 {  --prototypes for mod settings menu
     {
         type = "bool-setting",
-        name = "ismorphitePlacementEnabled",
+        name = "isMorphitePlacementEnabled",
         setting_type = "startup",
         default_value = true,
         order = "a"
@@ -10,7 +10,7 @@ data:extend(
 
     {
         type = "bool-setting",
-        name = "ismorphiteToIronEnabled",
+        name = "isMorphiteToIronEnabled",
         setting_type = "startup",
         default_value = true,
         order = "b"
@@ -19,7 +19,7 @@ data:extend(
 
     {
         type = "bool-setting",
-        name = "ismorphiteToCopperEnabled",
+        name = "isMorphiteToCopperEnabled",
         setting_type = "startup",
         default_value = true,
         order = "c"
@@ -27,7 +27,7 @@ data:extend(
 
     {
         type = "bool-setting",
-        name = "ismorphiteToStoneEnabled",
+        name = "isMorphiteToStoneEnabled",
         setting_type = "startup",
         default_value = true,
         order = "d"
@@ -36,7 +36,7 @@ data:extend(
 
     {
         type = "bool-setting",
-        name = "ismorphiteToCoalEnabled",
+        name = "isMorphiteToCoalEnabled",
         setting_type = "startup",
         default_value = true,
         order = "e"
@@ -44,7 +44,7 @@ data:extend(
     
     {
         type = "bool-setting",
-        name = "ismorphiteToMorphiteFuelEnabled",
+        name = "isMorphiteToMorphiteFuelEnabled",
         setting_type = "startup",
         default_value = true,
         order = "f"
@@ -52,7 +52,7 @@ data:extend(
 
     {
         type = "bool-setting",
-        name = "ismorphiteToCrudeOilEnabled",
+        name = "isMorphiteToCrudeOilEnabled",
         setting_type = "startup",
         default_value = true,
         order = "g"
@@ -60,7 +60,7 @@ data:extend(
 
     {
         type = "bool-setting",
-        name = "ismorphiteToUraniumOreEnabled",
+        name = "isMorphiteToUraniumOreEnabled",
         setting_type = "startup",
         default_value = true,
         order = "h"
@@ -68,7 +68,7 @@ data:extend(
 
     {
         type = "bool-setting",
-        name = "ismorphiteToWildcardEnabled",
+        name = "isMorphiteToWildcardEnabled",
         setting_type = "startup",
         default_value = true,
         order = "i"
@@ -76,21 +76,14 @@ data:extend(
 
     {
         type = "bool-setting",
-        name = "ismorphiteToRawWoodEnabled",
+        name = "isMorphiteToRawWoodEnabled",
         setting_type = "startup",
         default_value = true,
         order = "j"
-    },
-
-    {
-        type = "bool-setting",
-        name = "ismorphiteToExternalModEnabled",
-        setting_type = "startup",
-        default_value = true,
-        order = "k"
     }
-
 })
+
+require("external-setting.external-setting")
 
 
 

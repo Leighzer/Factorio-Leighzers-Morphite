@@ -13,7 +13,7 @@ AddRecipeDataBundle(
         order = "a"
     },
     nil, --optional technology prototype for recipe
-    settings.startup["ismorphiteToIronEnabled"].value,--bool to signal if we are inserting into data.raw
+    settings.startup["isMorphiteToIronEnabled"].value,--bool to signal if we are inserting into data.raw
     true --bool to signal if this recipe should allow productivity modules
 )
 
@@ -31,7 +31,7 @@ AddRecipeDataBundle(
         order = "b"
     },
     nil,
-    settings.startup["ismorphiteToCopperEnabled"].value,
+    settings.startup["isMorphiteToCopperEnabled"].value,
     true
 )
 
@@ -49,7 +49,7 @@ AddRecipeDataBundle(
         order = "c"
     },
     nil,
-    settings.startup["ismorphiteToStoneEnabled"].value,
+    settings.startup["isMorphiteToStoneEnabled"].value,
     true
 )
 
@@ -67,7 +67,7 @@ AddRecipeDataBundle(
         order = "d"
     },
     nil,
-    settings.startup["ismorphiteToCoalEnabled"].value,
+    settings.startup["isMorphiteToCoalEnabled"].value,
     true
 )
 
@@ -85,7 +85,7 @@ AddRecipeDataBundle(
         order = "h"
     },
     nil,
-    settings.startup["ismorphiteToMorphiteFuelEnabled"].value,
+    settings.startup["isMorphiteToMorphiteFuelEnabled"].value,
     true
 )
 
@@ -123,7 +123,7 @@ AddRecipeDataBundle(
         },
         order = "d-b"
     },
-    settings.startup["ismorphiteToCrudeOilEnabled"].value,
+    settings.startup["isMorphiteToCrudeOilEnabled"].value,
     true
 )   
 
@@ -163,7 +163,7 @@ AddRecipeDataBundle(
         },
         order = "e-p-b-c"
     },
-    settings.startup["ismorphiteToUraniumOreEnabled"].value,
+    settings.startup["isMorphiteToUraniumOreEnabled"].value,
     true
 )
 
@@ -205,7 +205,7 @@ AddRecipeDataBundle(
         },
         order = "e-p-b-d"
     },
-    settings.startup["ismorphiteToWildcardEnabled"].value,
+    settings.startup["isMorphiteToWildcardEnabled"].value,
     true
 )
 
@@ -223,6 +223,6 @@ AddRecipeDataBundle(
         order = "f"                    
     },
     nil,
-    settings.startup["ismorphiteToRawWoodEnabled"].value,
+    settings.startup["isMorphiteToRawWoodEnabled"].value,
     true
 )

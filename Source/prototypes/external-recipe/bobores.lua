@@ -1,4 +1,4 @@
-if bobmods and bobmods.ores and not (angelsmods and angelsmods.refining) then
+if bobmods and bobmods.ores and not (angelsmods and angelsmods.refining) and settings.startup["isMorphiteToboboresEnabled"].value then
     
     --add item sub group so we can keep all of the morphite to bobs ores recipes in the same section
     data:extend({
@@ -6,7 +6,7 @@ if bobmods and bobmods.ores and not (angelsmods and angelsmods.refining) then
             type = "item-subgroup",
             name = "leighzermorphite-bobores",
             group = "leighzermorphite",
-            order = "ab",
+            order = "ad",
           }
     })
 

@@ -11,7 +11,7 @@ data:extend(
           }         
 })
 
-if settings.startup["ismorphiteToMorphiteFuelEnabled"].value then 
+if settings.startup["isMorphiteToMorphiteFuelEnabled"].value then 
   data:extend({
     {--prototype for object that gets stored in inventory when fuel is created
     type = "item",

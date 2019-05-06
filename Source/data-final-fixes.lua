@@ -1,6 +1,4 @@
-if settings.startup["ismorphiteToExternalModEnabled"].value then --if enabled in the mod menu we will generate recipes for other supported mods
-    require("prototypes.external-recipe.external-recipe") -- prototypes for morphite to x recipes for items introduced in other mods (bobs, angels, etc.)
-end
+require("prototypes.external-recipe.external-recipe") -- prototypes for morphite to x recipes for items introduced in other mods (bobs, angels, etc.)
 
 InsertData()--this is where all recipes+technology get loaded into data.raw
 
@@ -9,7 +7,7 @@ local itemTable =
   {"morphite-ore", 1}  
 }
 
-if settings.startup["ismorphiteToMorphiteFuelEnabled"].value then --if morephite fuel is enabled enabled create deadlock stacking items/recipes
+if settings.startup["isMorphiteToMorphiteFuelEnabled"].value then --if morephite fuel is enabled enabled create deadlock stacking items/recipes
   table.insert(itemTable,{"morphite-fuel", 2})
 end
 
