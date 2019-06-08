@@ -53,8 +53,10 @@ Version: 0.1.2
     - Added morphite to uranium converstion.
     - Updated graphics.
     - Added technology.
+
   Bugfixes:
     - Settings now add/remove recipes rather than enabling/disabling them.
+
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.1
   Changes:
