@@ -5,7 +5,7 @@ if mods["leighzerscienceores"] then
                 type = "bool-setting",
                 name = "isMorphiteToleighzerscienceoresEnabled",
                 setting_type = "startup",
-                default_value = true,
+                default_value = false,
                 order = "za"
             },
     })    

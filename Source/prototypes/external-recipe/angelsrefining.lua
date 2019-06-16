@@ -6,7 +6,7 @@ if angelsmods and angelsmods.refining and settings.startup["isMorphiteToangelsre
             type = "item-subgroup",
             name = "leighzermorphite-angelsrefining",
             group = "leighzermorphite",
-            order = "ae",
+            order = "af",
           }
     })
 

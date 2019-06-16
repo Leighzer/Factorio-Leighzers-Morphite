@@ -1,7 +1,3 @@
-This folder is where settings are stored for external mods.
-
-external-setting.lua is the "master" file where all the other mod files get required in. 
-
 Here is a small guide if you want to add [Morphite to YOUR MOD RESOURCE] recipes.
 
 --Create a file
@@ -16,10 +12,14 @@ Please view bobores.lua for example mod detection, ore detection, and recipe tem
 --Mod + Recipe Detection
 If you don't create your own mod prototype (variables like bobmods, angelsmods, etc.) then I believe you can also use mods["YOURMODNAME"] to detect if your mod exists.
 
-If you want to give players the option to have morphite to your mod recipes, creating a settings file in the external-setting folder in the mod and follow a similar methodology as this guide. Below is an example.
+--external-setting.lua
+To give players the option to toggle morphite to your mod recipes, create a settings file in the external-setting folder in the mod and follow a similar methodology as this guide. Below is an example.
 if mods["YOURMODNAME"] and settings.startup["isMorphiteToYOURMODNAMEEnabled"].value then
 
-Then to detect your ore you probably want to go check data.raw.resource["example-ore"].
+add boolean setting that will get used at the start of the external-recipe file you created that can allow or deny recipes getting added.
+
+--Detect your resource before hand
+To detect your resource you probably want to go check data.raw.resource["example-ore"].
 
 --Add an item sub group
 Immediately inside your mod detection if statement, create an item subgroup. Use a previously existing item subgroup as a template. All that needs to be changed is the name field and order field.

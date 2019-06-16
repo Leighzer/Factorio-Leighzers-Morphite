@@ -6,7 +6,7 @@ if mods["Clowns-Extended-Minerals"] then
                 name = "isMorphiteToClowns-Extended-MineralsEnabled",
                 setting_type = "startup",
                 default_value = true,
-                order = "ze"
+                order = "zf"
             },
     })    
 end

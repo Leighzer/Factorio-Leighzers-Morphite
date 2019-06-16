@@ -5,7 +5,7 @@ if mods["Clowns-Extended-Minerals"] and settings.startup["isMorphiteToClowns-Ext
             type = "item-subgroup",
             name = "leighzermorphite-Clowns-Extended-Minerals",
             group = "leighzermorphite",
-            order = "af",
+            order = "ag",
           }
     })
     
