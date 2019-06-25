@@ -1,12 +1,12 @@
-if mods["Clowns-Extended-Minerals"] then    
+if mods["leighzercheetahore"] then        
     data:extend(
         {
             {
                 type = "bool-setting",
-                name = "isMorphiteToClowns-Extended-MineralsEnabled",
+                name = "isMorphiteToleighzercheetahoreEnabled",
                 setting_type = "startup",
                 default_value = true,
-                order = "zh"
-            },
+                order = "ze"
+            }            
     })    
 end

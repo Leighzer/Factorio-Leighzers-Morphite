@@ -1,8 +1,3 @@
-
-function AddProductivityEnabledRecipe(recipeName)
-    table.insert(leighzermods.productivityEnabledRecipes, recipeName)  
-end
-
 function AddRecipeDataBundle(recipe, technology, allowDataInsert, allowProductivity)
 
     leighzermods.recipeDataBundles[recipe.name] = {recipe = recipe, technology = technology, allowDataInsert = allowDataInsert, allowProductivity = allowProductivity}
@@ -22,7 +17,6 @@ function EnableDataInsert(recipeName)
 end
 
 function InsertData()
-
     for recipeName,recipeDataBundle in pairs(leighzermods.recipeDataBundles) do
 
         if recipeDataBundle.allowDataInsert then
@@ -46,7 +40,7 @@ function InsertData()
     end
 
     --update table add recipes we want to be able to PROD module
-    --leighzermods.productivityEnabledRecipes is the list of recipe names we want to allow the use of productivity modules with
+    --leighzermods.leighzermorphite.productivityEnabledRecipes is the list of recipe names we want to allow the use of productivity modules with
     for k, v in pairs(data.raw.module) do
         if v.name:find("productivity%-module") and v.limitation then
         for _, recipe in ipairs(leighzermods.leighzermorphite.productivityEnabledRecipes) do

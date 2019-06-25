@@ -6,7 +6,7 @@ if mods["bobores"] then
                 name = "isMorphiteToboboresEnabled",
                 setting_type = "startup",
                 default_value = true,
-                order = "zd"
+                order = "zf"
             },
     })     
 end

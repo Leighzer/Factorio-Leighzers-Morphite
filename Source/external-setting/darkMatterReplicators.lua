@@ -6,7 +6,7 @@ if mods["dark-matter-replicators-0_17-port"] then
                 name = "isMorphiteTodark-matter-replicators-0_17-portEnabled",
                 setting_type = "startup",
                 default_value = true,
-                order = "zg"
+                order = "zi"
             },
     }) 
 end

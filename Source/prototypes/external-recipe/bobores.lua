@@ -6,7 +6,7 @@ if bobmods and bobmods.ores and not (angelsmods and angelsmods.refining) and set
             type = "item-subgroup",
             name = "leighzermorphite-bobores",
             group = "leighzermorphite",
-            order = "ae",
+            order = "af",
           }
     })
 

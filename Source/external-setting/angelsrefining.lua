@@ -6,7 +6,7 @@ if mods["angelsrefining"] then
                 name = "isMorphiteToangelsrefiningEnabled",
                 setting_type = "startup",
                 default_value = true,
-                order = "ze"
+                order = "zg"
             },
     }) 
 end

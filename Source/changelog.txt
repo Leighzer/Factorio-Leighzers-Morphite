@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.8
+  Changes:
+    - Added morphite to Leighzer's Cheetah Ore recipe.    
+  Bugfixes:
+    - 0.17.52 hotfix.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.2.7
   Changes:
     - Added morphite to Leighzer's Buried Science recipes.    

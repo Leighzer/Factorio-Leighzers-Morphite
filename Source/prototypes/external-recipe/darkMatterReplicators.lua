@@ -6,7 +6,7 @@ if mods["dark-matter-replicators-0_17-port"] and settings.startup["isMorphiteTod
             type = "item-subgroup",
             name = "leighzermorphite-dark-matter-replicators-0_17-port",
             group = "leighzermorphite",
-            order = "ah",
+            order = "ai",
           }
     })
     
