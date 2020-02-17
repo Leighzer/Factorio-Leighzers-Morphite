@@ -1,12 +1,12 @@
 {
   "name": "leighzermorphite",
-  "version": "0.2.8",
+  "version": "0.3.0",
   "title": "Leighzer's Morphite",
   "author": "Leighzer",
   "contact": "Please message me on the factorio forums my username is leighzer.",
   "homepage": "https://forums.factorio.com/viewtopic.php?f=190&t=63592",
-  "factorio_version": "0.17",
-  "dependencies": [ "base >= 0.17.52", "? rso-mod >= 4.0.2", "? bobores >= 0.17.0", "? angelsrefining >= 0.10.1",
-                    "? deadlock-beltboxes-loaders >= 2.1.10", "? DeadlockCrating >= 1.4.8", "? leighzerburiedscience >= 0.1.5"],
+  "factorio_version": "0.18",
+  "dependencies": [ "base >= 0.18.1", "? rso-mod >= 6.0.2", "? bobores >= 0.18.0", "? angelsrefining >= 0.11.2",
+                    "? deadlock-beltboxes-loaders >= 2.3.0", "? leighzerburiedscience >= 0.2.0"],
   "description": "Configurable vanilla friendly mod that adds a new supplemental ore to the game. This new ore can be processed into the other raw resources."
 }

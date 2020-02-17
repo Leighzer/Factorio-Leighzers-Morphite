@@ -18,11 +18,3 @@ if deadlock_stacking then
     end
   end
 end
-
-if deadlock_crating then
-  for _, item in pairs(itemTable) do
-    if data.raw.item[item[1]] then
-      deadlock_crating.create(item[1], "deadlock-crating-"..item[2])
-    end
-  end
-end

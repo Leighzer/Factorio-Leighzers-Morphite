@@ -1,10 +1,10 @@
 
 data:extend(
 {
-  {--prototype for particles that fly out when you hand mine the ore in the ground
-    type = "particle",
-    name = "morphite-ore-particle",
-    flags = {"not-on-map"},
+  
+  {--prototype for particles that fly out when you hand mine the ore in the ground    
+    type = "optimized-particle",
+    name = "morphite-ore-particle",    
     life_time = 180,
     pictures =
     {
