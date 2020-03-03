@@ -4,7 +4,15 @@ data:extend(
             type = "item",
             name = "morphite-ore",
             icon = "__leighzermorphite__/graphics/icons/morphite-ore.png",
-            icon_size = 32,            
+            icon_size = 64,
+            icon_mipmaps = 4,
+            pictures =
+            {
+              { size = 64, filename = "__leighzermorphite__/graphics/icons/morphite-ore.png",   scale = 0.25, mipmap_count = 4 },
+              { size = 64, filename = "__leighzermorphite__/graphics/icons/morphite-ore-1.png", scale = 0.25, mipmap_count = 4 },
+              { size = 64, filename = "__leighzermorphite__/graphics/icons/morphite-ore-2.png", scale = 0.25, mipmap_count = 4 },
+              { size = 64, filename = "__leighzermorphite__/graphics/icons/morphite-ore-3.png", scale = 0.25, mipmap_count = 4 }
+            },
             subgroup = "raw-resource",
             order = "a-d-e",
             stack_size = 50,

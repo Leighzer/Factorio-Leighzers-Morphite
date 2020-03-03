@@ -26,21 +26,29 @@ data:extend(
     regular_rq_factor_multiplier = 1.10,
     starting_rq_factor_multiplier = 1.5
   },
-
-   stage_counts = {15000, 8000, 4000, 2000, 1000, 500, 200, 80},
-   stages =
+  
+  stage_counts = {15000, 9500, 5500, 2900, 1300, 400, 150, 80},
+  stages =
+  {
+    sheet =
     {
-      sheet =
+      filename = "__leighzermorphite__/graphics/entity/morphite-ore/morphite-ore.png",
+      priority = "extra-high",
+      size = 64,
+      frame_count = 8,
+      variation_count = 8,
+      hr_version =
       {
-        filename = "__leighzermorphite__/graphics/entity/morphite-ore/morphite-ore.png",
-        tint = {r=1, g=0, b=1, a = 1},--the graphic is actually gray scaled, so we use a tint to make it the color we want
+        filename = "__leighzermorphite__/graphics/entity/morphite-ore/hr-morphite-ore.png",
         priority = "extra-high",
-        width = 64,
-        height = 64,
+        size = 128,
         frame_count = 8,
-        variation_count = 8,        
+        variation_count = 8,
+        scale = 0.5
       }
-    },
+    }
+  }   
+ 
   }
 }
 ) 

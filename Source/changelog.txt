@@ -1,11 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.1
+  Changes:
+    - Update ore entity and item icon graphics.  
+
+
+---------------------------------------------------------------------------------------------------
 Version: 0.3.0
   Changes:
     - 0.18 update.
     - Removed support for deprecated mod "Deadlock's Crating Machine"
   Bugfixes:
     - Update ore particle type to "optimized-particle" from deprecated "particle" type.
-
 
 ---------------------------------------------------------------------------------------------------
 Version: 0.2.8
