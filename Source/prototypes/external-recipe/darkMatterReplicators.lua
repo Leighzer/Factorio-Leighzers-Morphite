@@ -16,7 +16,7 @@ if mods["dark-matter-replicators-0_17-port"] and settings.startup["isMorphiteTod
             name = "morphite-to-tenemut",
             energy_required = 1, 
             enabled = true,
-            category = "crafting",
+            category = "advanced-crafting",
             ingredients = {{"morphite-ore", 1}},
             result = "tenemut",
             result_count = 1,

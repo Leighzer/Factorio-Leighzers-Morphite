@@ -1,8 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.2
+  Changes:
+    - Updated item, recipe, and resource ordering.    
+    - All morphite recipes are no longer hand craftable. Done to reduce possible issues with hand crafting other vanilla recipes. Bit more realistic. Morphite should not show in total raw section anymore.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.3.1
   Changes:
     - Update ore entity and item icon graphics.  
-
 
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.0

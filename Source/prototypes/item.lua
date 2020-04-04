@@ -14,7 +14,7 @@ data:extend(
               { size = 64, filename = "__leighzermorphite__/graphics/icons/morphite-ore-3.png", scale = 0.25, mipmap_count = 4 }
             },
             subgroup = "raw-resource",
-            order = "a-d-e",
+            order = "x-a",
             stack_size = 50,
           }         
 })

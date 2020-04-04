@@ -5,7 +5,7 @@ if leighzermods and leighzermods.leighzerburiedscience and settings.startup["isM
             type = "item-subgroup",
             name = "leighzermorphite-leighzerburiedscience",
             group = "leighzermorphite",
-            order = "ad",
+            order = "ae",
           }
     })
         
@@ -28,7 +28,7 @@ if leighzermods and leighzermods.leighzerburiedscience and settings.startup["isM
                 name = "morphite-to-"..v.name,
                 energy_required = energy_required_science_pack * settings.startup["MorphitetoleighzerburiedscienceMultiplier"].value, 
                 enabled = true,
-                category = "crafting",
+                category = "advanced-crafting",
                 ingredients = {{"morphite-ore", 1}},
                 result = v.minable.result,
                 result_count = 1,

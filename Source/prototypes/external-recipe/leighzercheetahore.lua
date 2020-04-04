@@ -5,7 +5,7 @@ if leighzermods and leighzermods.leighzercheetahore and settings.startup["isMorp
             type = "item-subgroup",
             name = "leighzermorphite-leighzercheetahore",
             group = "leighzermorphite",
-            order = "ae",
+            order = "ab",
           }
     })
     
@@ -15,7 +15,7 @@ if leighzermods and leighzermods.leighzercheetahore and settings.startup["isMorp
             name = "morphite-to-cheetah-ore",
             energy_required = 5, 
             enabled = true,
-            category = "crafting",
+            category = "advanced-crafting",
             ingredients = {{"morphite-ore", 1}},
             result = "cheetah-ore",
             result_count = 1,

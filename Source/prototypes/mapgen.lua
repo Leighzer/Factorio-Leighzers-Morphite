@@ -5,7 +5,7 @@ data:extend(
         type = "autoplace-control",
         name = "morphite-ore",
         richness = true,
-        order = "b-f",
+        order = "x-a",
         category="resource"
         },
         {

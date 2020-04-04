@@ -6,9 +6,9 @@ data:extend(
    type = "resource",
    name = "morphite-ore",
    icon = "__leighzermorphite__/graphics/icons/morphite-ore.png",
-   icon_size = 32,
+   icon_size = 64,
    flags = {"placeable-neutral"},
-   order="h",
+   order="x-a",
    map_color = {r=1, g=0, b=1},--color used for ore patch when viewed from mini map
    minable =
    {     
