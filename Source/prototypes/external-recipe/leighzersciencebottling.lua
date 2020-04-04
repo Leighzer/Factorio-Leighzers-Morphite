@@ -16,7 +16,7 @@ if leighzermods and leighzermods.leighzersciencebottling and settings.startup["i
                 name = "morphite-to-precursore-ore",
                 energy_required = 1, 
                 enabled = true,
-                category = "advanced-crafting",
+                category = "crafting",
                 ingredients = {{"morphite-ore", 1}},
                 result = "precursore-ore",
                 result_count = 1,

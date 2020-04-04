@@ -15,7 +15,7 @@ if leighzermods and leighzermods.leighzercheetahore and settings.startup["isMorp
             name = "morphite-to-cheetah-ore",
             energy_required = 5, 
             enabled = true,
-            category = "advanced-crafting",
+            category = "crafting",
             ingredients = {{"morphite-ore", 1}},
             result = "cheetah-ore",
             result_count = 1,

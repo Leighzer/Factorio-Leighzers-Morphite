@@ -16,7 +16,7 @@ if mods["Clowns-Extended-Minerals"] and settings.startup["isMorphiteToClowns-Ext
                 name = "morphite-to-clowns-ore"..i,
                 energy_required = 1, 
                 enabled = true,
-                category = "advanced-crafting",
+                category = "crafting",
                 ingredients = {{"morphite-ore", 2}},
                 result = "clowns-ore"..i,
                 result_count = 1,

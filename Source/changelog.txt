@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.3
+  Changes:
+    - Undo: Morphite recipes not able to be hand craftable.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.3.2
   Changes:
     - Updated item, recipe, and resource ordering.    
