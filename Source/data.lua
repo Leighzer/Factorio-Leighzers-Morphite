@@ -89,6 +89,8 @@ end
 if settings.startup["isMorphiteToMorphiteFuelEnabled"].value then
     leighzermods.utils.createItem("morphite-fuel","__leighzermorphite__/graphics/icons/morphite-fuel.png",32,"intermediate-product","p[morphite-fuel]",50,nil,"Morphite fuel")
     leighzermods.utils.createRecipe("morphite-to-morphite-fuel",0.5,true,"crafting",{{"morphite-ore",2}},"morphite-fuel",1,"leighzermorphite-vanilla","h",true)
+    data.raw.item["morphite-fuel"].fuel_value = "8MJ"
+    data.raw.item["morphite-fuel"].fuel_category = "chemical"
 end
 
 -- morphite to all 4 vanilla ores
