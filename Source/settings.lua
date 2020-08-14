@@ -2,14 +2,6 @@ data:extend(
 {  --prototypes for mod settings menu
     {
         type = "bool-setting",
-        name = "isMorphitePlacementEnabled",
-        setting_type = "startup",
-        default_value = true,
-        order = "a"
-    },
-
-    {
-        type = "bool-setting",
         name = "isMorphiteToIronEnabled",
         setting_type = "startup",
         default_value = true,

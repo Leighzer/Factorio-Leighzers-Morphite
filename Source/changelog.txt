@@ -1,4 +1,21 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.4
+  Changes:
+    - Mostly finished code overhaul!!!
+    - Added dependency to library mod.
+    - Changed graphics to darker/muted version. Less of an eye sore.
+    - Removed functionality with Leighzer's Buried Science (may be re-introduced later).
+    - Removed functionality with Deadlock-beltboxes-loaders. I do this as I am thinking of writing a mod that dynamically makes stack items for all items possible.
+    - Removed functionality with darkMatterReplicators. Wayy too many mods out there for this one, let's get on a single page people haha.
+    - Removed ability to have/remove morphite patch placement. Don't think anyone has been using that.
+    - Migrated good amount of localisation strings into code.
+    - Refactored angels, leighzercheetahore, leighzerscienceore external recipe files to use library calls
+    - Added janky solution to make rest of external recipe files work for now.
+    - Deleted no longer necessary graphics
+    - Deleted original functions file.
+    - Directory restructuring.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.3.3
   Changes:
     - Undo: Morphite recipes not able to be hand craftable.
