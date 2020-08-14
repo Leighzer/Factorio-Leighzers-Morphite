@@ -1,12 +1,12 @@
 {
   "name": "leighzermorphite",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "title": "Leighzer's Morphite",
   "author": "Leighzer",
   "contact": "Please message me on the factorio forums my username is leighzer.",
   "homepage": "https://forums.factorio.com/viewtopic.php?f=190&t=63592",
   "factorio_version": "0.18",
-  "dependencies": [ "base >= 0.18.47", "leighzerlib >= 0.1.2", "? rso-mod >= 6.0.11", "? bobores >= 0.18.3", "? angelsrefining >= 0.11.15",
+  "dependencies": [ "base >= 0.18.47", "leighzerlib >= 0.1.3", "? rso-mod >= 6.0.11", "? bobores >= 0.18.3", "? angelsrefining >= 0.11.15",
                    "? Clowns-Extended-Minerals >= 1.1.17", "? leighzercheetahore >= 0.2.2", "? leighzersciencebottling >= 0.2.2",
                    "? leighzerscienceores >= 0.2.1"],
   "description": "Configurable vanilla friendly mod that adds a new supplemental ore to the game. This new ore can be processed into the other raw resources."
