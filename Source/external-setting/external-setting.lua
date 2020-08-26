@@ -1,6 +1,0 @@
-require('leighzerscienceores')
-require('leighzersciencebottling')
-require('leighzercheetahore')
-require('bobores')
-require('angelsrefining')
-require('Clowns-Extended-Minerals')

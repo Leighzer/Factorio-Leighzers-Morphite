@@ -1,8 +1,18 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.0
+  Changes:
+    - Removed settings to pick and choose what Morphite can be made into.
+    - Added Compatibility.md for instructions on customizing what Morphite can be made into.
+    - Removed many unused/old graphics.
+    - Deleted majority of old/manual code. Code now dynamically scans the data.raw.resource table for creating recipes.
+    - Added migration so that if mod is added after the fact, appropriate recipes will be unlocked as well.
+    - Removed morphite to wild card recipe (may be introduced with dynamic version at a later date).
+    - Added dependencies to Leighzer's Science Ores and Leighzer's Buried Science so that their changes are made first.    
+    - Updated thumbnail.
+---------------------------------------------------------------------------------------------------
 Version: 0.3.6
   Bugfixes:
     - Fix for morphite fuel not having a fuel value.
-
 ---------------------------------------------------------------------------------------------------
 Version: 0.3.4
   Changes:
