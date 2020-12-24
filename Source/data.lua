@@ -4,25 +4,13 @@ end
 
 if not leighzermods.leighzermorphite then
     leighzermods.leighzermorphite = {}
-
-    leighzermods.leighzermorphite.tintColorName = "medium_orchid"
-
-    leighzermods.leighzermorphite.defaultMorphiteRequired = 1
-    leighzermods.leighzermorphite.defaultEnergyRequired = 1
-    leighzermods.leighzermorphite.defaultResultCount = {item=1,fluid=10}
+    leighzermods.leighzermorphite.tintColorName = "medium_orchid"    
     leighzermods.leighzermorphite.defaultSubgroup = "leighzermorphite"
 
-    -- duct tape table of 'fake' resources that will also be examined for inserting recipes in addition to data.raw.resource
-    leighzermods.leighzermorphite.extras = {}
-    leighzermods.leighzermorphite.extras = {}
-    leighzermods.leighzermorphite.extras["wood"] = {
-        leighzermorphiteDisabled = false,
-        leighzermorphiteMorphiteAmountRequired = nil,
-        leighzermorphiteEnergyRequiredOverride = nil,
-        leighzermorphiteRecipeResultCountsOverride = nil,
-        leighzermorphiteAdditionalIngredients = nil,
-        leighzermorphiteDependentTechName = nil,
-        leighzermorphiteCraftingCategoryOverride = nil,
+    -- 'extras' is a table of fake resources that will also be examined for inserting recipes in addition to data.raw.resource
+    leighzermods.leighzermorphite.extras = {}    
+
+    leighzermods.leighzermorphite.extras["wood"] = {        
         name = "wood",
         category = "basic-solid",
         order = "a",
@@ -30,15 +18,19 @@ if not leighzermods.leighzermorphite then
         minable = {
             result = "wood",
         },
-    }
-    leighzermods.leighzermorphite.extras["water"] = {
-        leighzermorphiteDisabled = false,
-        leighzermorphiteMorphiteAmountRequired = nil,
-        leighzermorphiteEnergyRequiredOverride = nil,
-        leighzermorphiteRecipeResultCountsOverride = {100},
-        leighzermorphiteAdditionalIngredients = nil,
-        leighzermorphiteDependentTechName = nil,
-        leighzermorphiteCraftingCategoryOverride = "chemistry",
+        leighzermorphite = {
+            disabled = false,
+            morphiteAmountRequired = nil,
+            energyRequired = nil,
+            resultCounts = nil,
+            additionalIngredients = nil,
+            dependentTechName = nil,
+            craftingCategory = nil,
+        },
+    }    
+    
+    leighzermods.leighzermorphite.extras["water"] = {        
+        craftingCategory = "chemistry",
         name = "water",
         category = "basic-fluid",
         order = "a[water]",
@@ -53,15 +45,17 @@ if not leighzermods.leighzermorphite then
                 },
             },
         },
+        leighzermorphite = {
+            disabled = false,
+            morphiteAmountRequired = nil,
+            energyRequired = nil,
+            resultCounts = {100},
+            additionalIngredients = nil,
+            dependentTechName = nil,
+        }
     }
-    leighzermods.leighzermorphite.extras["morphite-fuel"] = {
-        leighzermorphiteDisabled = false,
-        leighzermorphiteMorphiteAmountRequired = nil,
-        leighzermorphiteEnergyRequiredOverride = 0.5,
-        leighzermorphiteRecipeResultCountsOverride = nil,
-        leighzermorphiteAdditionalIngredients = nil,
-        leighzermorphiteDependentTechName = nil,
-        leighzermorphiteCraftingCategoryOverride = nil,
+
+    leighzermods.leighzermorphite.extras["morphite-fuel"] = {        
         name = "morphite-fuel",
         category = "basic-solid",
         order = "z",
@@ -69,8 +63,16 @@ if not leighzermods.leighzermorphite then
         minable = {
             result = "morphite-fuel",
         },
-        
-    }
+        leighzermorphite = {
+            disabled = false,
+            morphiteAmountRequired = nil,
+            energyRequired = 0.5,
+            resultCounts = nil,
+            additionalIngredients = nil,
+            dependentTechName = nil,
+            craftingCategory = nil,
+        }
+    }    
 end
 
 -- crafting tab
@@ -97,35 +99,30 @@ leighzermods.utils.createItem("morphite-fuel","__leighzermorphite__/graphics/ico
 data.raw.item["morphite-fuel"].fuel_value = "8MJ"
 data.raw.item["morphite-fuel"].fuel_category = "chemical"
 
--- define morphite data for vanilla resources
+-- define morphite recipe data for vanilla resources
 local vanillaRawResouceData = {}
 vanillaRawResouceData["uranium-ore"] = {
-    leighzermorphiteDisabled = false,
-    leighzermorphiteMorphiteAmountRequired = 1,
-    leighzermorphiteEnergyRequiredOverride = 4,
-    leighzermorphiteRecipeResultCountsOverride = nil,
-    leighzermorphiteAdditionalIngredients = {{name="steam",amount=25,type="fluid"},{name="sulfuric-acid",amount=2,type="fluid"}},
-    leighzermorphiteDependentTechName = "uranium-processing",
-    leighzermorphiteCraftingCategoryOverride = "chemistry"
+    disabled = false,
+    morphiteAmountRequired = 1,
+    energyRequired = 4,
+    resultCounts = nil,
+    additionalIngredients = {{name="steam",amount=25,type="fluid"},{name="sulfuric-acid",amount=2,type="fluid"}},
+    dependentTechName = "uranium-processing",
+    craftingCategory = "chemistry"
 }
 vanillaRawResouceData["crude-oil"] = {
-    leighzermorphiteDisabled = false,
-    leighzermorphiteMorphiteAmountRequired = 5,
-    leighzermorphiteEnergyRequiredOverride = 7.5,
-    leighzermorphiteRecipeResultCountsOverride = {30},
-    leighzermorphiteAdditionalIngredients = {{name="water",amount=50,type="fluid"}},
-    leighzermorphiteDependentTechName = "oil-processing",
-    leighzermorphiteCraftingCategoryOverride = "chemistry"
+    disabled = false,
+    morphiteAmountRequired = 5,
+    energyRequired = 7.5,
+    resultCounts = {30},
+    additionalIngredients = {{name="water",amount=50,type="fluid"}},
+    dependentTechName = "oil-processing",
+    craftingCategory = "chemistry"
 }
 
--- inject morphite data into vanilla resources
+-- set leighzermorphite customization data on the resource
 for k,v in pairs(data.raw.resource) do -- for each science pack item
     if (vanillaRawResouceData[k]) then -- if we have data for it
-        for kk,vv in pairs(vanillaRawResouceData[k]) do
-            if (v[kk] == nil) then -- if there already isn't a value there
-                v[kk] = vv -- load each field into the item prototype
-                -- our dynamic resource creator will examine these in data-updates.lua and use them to make decisions 
-            end
-        end
+        v.leighzermorphite = vanillaRawResouceData[k] -- load morphite recipe data into the resource
     end
 end

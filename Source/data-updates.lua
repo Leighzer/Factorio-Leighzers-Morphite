@@ -1,17 +1,47 @@
 --require('__debugadapter__/debugadapter.lua')
 local function Process(resource)
-    if ((not resource.leighzermorphiteDisabled) and resource.minable and (not(resource.name == "morphite-ore"))) then
 
-        local minable = resource.minable
-        local morphiteAmount = resource.leighzermorphiteMorphiteAmountRequired or leighzermods.leighzermorphite.defaultMorphiteRequired
-        local energyRequired = resource.leighzermorphiteEnergyRequiredOverride or minable.mining_time or leighzermods.leighzermorphite.defaultEnergyRequired
-        local dependentTechName = resource.leighzermorphiteDependentTechName
+    local minable = resource.minable
+
+    local disabled = false
+    local morphiteAmountRequired = 1
+    local energyRequired = minable.mining_time or 1
+    local resultCounts = nil
+    local additionalIngredients = nil
+    local dependentTechName = nil
+    local craftingCategory = nil
+
+    if (resource.leighzermorphite) then
+        if (resource.leighzermorphite.disabled ~= nil) then
+            disabled = resource.leighzermorphite.disabled
+        end
+        if (resource.leighzermorphite.morphiteAmountRequired ~= nil) then
+            morphiteAmountRequired = resource.leighzermorphite.morphiteAmountRequired
+        end
+        if (resource.leighzermorphite.energyRequired ~= nil) then
+            energyRequired = resource.leighzermorphite.energyRequired
+        end
+        if (resource.leighzermorphite.resultCounts ~= nil) then
+            resultCounts = resource.leighzermorphite.resultCounts
+        end
+        if (resource.leighzermorphite.additionalIngredients ~= nil) then
+            additionalIngredients = resource.leighzermorphite.additionalIngredients
+        end
+        if (resource.leighzermorphite.dependentTechName ~= nil) then
+            dependentTechName = resource.leighzermorphite.dependentTechName
+        end
+        if (resource.leighzermorphite.craftingCategory ~= nil) then
+            craftingCategory = resource.leighzermorphite.craftingCategory
+        end
+    end
+
+    if ((not disabled) and resource.minable and (not(resource.name == "morphite-ore"))) then
 
         local dependentTechFound = false
         local dependentTech = nil
-        if (resource.leighzermorphiteDependentTechName) then
+        if (dependentTechName) then
             for kk,vv in pairs(data.raw.technology) do
-                if (kk == resource.leighzermorphiteDependentTechName and vv.effects) then
+                if (kk == dependentTechName and vv.effects) then
                     dependentTech = vv
                     dependentTechFound = true
                     break
@@ -29,14 +59,14 @@ local function Process(resource)
                 if (result.type and result.type == "fluid") then
                     containsFluids = true                    
                 end
-                if (resource.leighzermorphiteRecipeResultCountsOverride and resource.leighzermorphiteRecipeResultCountsOverride[i]) then
-                    result.amount = resource.leighzermorphiteRecipeResultCountsOverride[i]
+                if (resultCounts and resultCounts[i]) then
+                    result.amount = resultCounts[i]
                 end
             end            
         elseif (minable.result) then
             local amount = 1
-            if (resource.leighzermorphiteRecipeResultCountsOverride and resource.leighzermorphiteRecipeResultCountsOverride[1]) then
-                amount = resource.leighzermorphiteRecipeResultCountsOverride[1]
+            if (resultCounts and resultCounts[1]) then
+                amount = resultCounts[1]
             elseif (minable.result_count) then
                 amount = minable.result_count
             end
@@ -51,7 +81,7 @@ local function Process(resource)
                     name = "morphite-to-"..resource.name,
                     energy_required = energyRequired,
                     enabled = not dependentTechFound,                    
-                    ingredients = {{name="morphite-ore",amount=morphiteAmount,type="item"}}, -- other ingredients get inserted later
+                    ingredients = {{name="morphite-ore",amount=morphiteAmountRequired,type="item"}}, -- other ingredients get inserted later
                     results = results,
                     subgroup = leighzermods.leighzermorphite.defaultSubgroup,
                     order = resource.order
@@ -60,14 +90,14 @@ local function Process(resource)
             recipe.localised_name = leighzermods.utils.toNiceName(resource.name)
         end
 
-        if (resource.leighzermorphiteAdditionalIngredients) then -- if there are extra ingredients spec'd for this resource
-            for i,ingredient in ipairs(resource.leighzermorphiteAdditionalIngredients) do
+        if (additionalIngredients) then -- if there are extra ingredients spec'd for this resource
+            for i,ingredient in ipairs(additionalIngredients) do
                 table.insert(recipe.ingredients,ingredient) -- add them to the recipe
             end
         end
 
-        if (resource.leighzermorphiteCraftingCategoryOverride) then
-            recipe.category = resource.leighzermorphiteCraftingCategoryOverride
+        if (craftingCategory) then
+            recipe.category = craftingCategory
         else
             if (resource.category == "basic-fluid" or containsFluids) then
                 recipe.category = "chemistry"
@@ -85,8 +115,10 @@ local function Process(resource)
 end
 
 for k,v in pairs(data.raw.resource) do
-     Process(v)
+    --log(k)
+    Process(v)
 end
 for k,v in pairs(leighzermods.leighzermorphite.extras) do
+    --log(k)
     Process(v)
 end
