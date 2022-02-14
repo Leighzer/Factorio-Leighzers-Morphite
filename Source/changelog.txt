@@ -1,4 +1,8 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.5.1
+  Changes:
+    - Update to use new version of leighzermods.utils.createItemGroup.
+---------------------------------------------------------------------------------------------------
 Version: 0.5.0
   Changes:
     - Renamed compatibility fields.

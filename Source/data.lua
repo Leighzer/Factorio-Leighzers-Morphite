@@ -76,7 +76,8 @@ if not leighzermods.leighzermorphite then
 end
 
 -- crafting tab
-leighzermods.utils.createItemGroup("leighzermorphite","z","z","__leighzermorphite__/graphics/item-group/morphite-processing-category.png", 128, "Morphite Processing")
+local morphiteGroupIcons = {{icon="__leighzermorphite__/graphics/item-group/morphite-processing-category.png", icon_size=128}}
+leighzermods.utils.createItemGroup("leighzermorphite","z","z",morphiteGroupIcons, "Morphite Processing")
 -- row in crafting tab
 leighzermods.utils.createItemSubgroup("leighzermorphite","leighzermorphite","a")
 
